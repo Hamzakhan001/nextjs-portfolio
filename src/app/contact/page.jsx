@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactPage = () => {
   return (
-    <div>page</div>
+    <div>xckjvc</div>
   )
 }
 
