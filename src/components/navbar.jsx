@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import NavLink from "./navLink";
+import Image from 'next/image';
 
 const navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,14 +17,12 @@ const navbar = () => {
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-48 xl:px-48 items-center justify-center">
       <div className="hidden md:flex gap-4 w-1/3">
-        {links.map((elem) => (
-          <Link href={elem.url} key={elem.title}>
-            {elem.title}
-          </Link>
+        {links.map((link) => (
+          <NavLink link={link} key={link.title} />
         ))}
       </div>
 
-      <div className="md:hidden lg:flex w-1/3">
+      <div className="md:hidden lg:flex xl:justify-center w-1/3">
         <Link
           href="/"
           className="w-50 flex text-sm bg-black rounded-md p-1 font-semibold"
